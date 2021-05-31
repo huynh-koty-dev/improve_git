@@ -25,4 +25,8 @@ return [
     'Vietnamese' => 'Vietnamese',
     'Korea' => 'Korea',
     'Change' => 'Change',
+    'userName' => 'UserName',
+    'pass_confirm' => 'Confirm password',
+    'register_success' => 'Register successfully!',
+    'register_fail' => 'Register failed!',
 ];

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{{ route('home') }}">Navbar</a>
+    <a class="navbar-brand" href="{{ route('todos.index') }}">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -7,8 +7,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav mr-auto">
             <div class="nav-item dropdown">
-                <a href="{!! route('user.change-language', ['en']) !!}">{{ __('trans.English') }}</a>
-                <a href="{!! route('user.change-language', ['vie']) !!}">{{ __('trans.Vietnamese') }}</a>
+                <a href="{!! route('user.change_language', ['en']) !!}">{{ __('trans.English') }}</a>
+                <a href="{!! route('user.change_language', ['vie']) !!}">{{ __('trans.Vietnamese') }}</a>
             </div>
         </div>
         <div class="nav-item dropdown">
@@ -30,7 +30,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('loginpage') }}">{{ __('trans.Log in') }}</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">{{ __('trans.Register') }}</a>
+                    <a class="dropdown-item" href="{{ route('register_page') }}">{{ __('trans.Register') }}</a>
                 </div>
             @endif
         </div>

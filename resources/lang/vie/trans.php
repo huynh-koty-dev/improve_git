@@ -25,4 +25,8 @@ return [
     'Vietnamese' => 'Tiếng Việt',
     'Korea' => 'Tiếng Hàn',
     'Change' => 'Thay đổi',
+    'userName' => 'Nhập tên người dùng',
+    'pass_confirm' => 'Nhập lại mật khẩu',
+    'register_success' => 'Đăng ký thành công!',
+    'register_fail' => 'Đăng ký thất bại!',
 ];

@@ -19,7 +19,7 @@ class CheckLogout
     {
         if (Auth::check()) {
             
-            return \redirect()->route('home');
+            return \redirect()->route('todos.index');
         } else {
 
             return $next($request);
