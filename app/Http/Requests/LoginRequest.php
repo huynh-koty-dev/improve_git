@@ -28,11 +28,6 @@ class LoginRequest extends FormRequest
             'email' => 'required|email',
             'password' => [
                 'required',
-                // 'min:8',
-                // 'max:30',
-                // 'regex:/[a-z]/',
-                // 'regex:/[A-Z]/', 
-                // 'regex:/[0-9]/',
             ], 
         ];
     }
@@ -43,11 +38,6 @@ class LoginRequest extends FormRequest
             'email.required' => __('request.email_required'),
             'email.email' => __('request.email_email'),
             'password.required' => __('request.pass_required'),
-            // 'password.min' => __('request.pass_min'),
-            // 'password.max' => __('request.pass_max'),
-            // 'password.regex:/[a-z]/' => __('pass_lowercase_uppercase'),
-            // 'password.regex:/[A-Z]/' => __('pass_lowercase_uppercase'),
-            // 'password.regex:/[A-Z]/' => __('pass_number'),
         ];
     }   
 }

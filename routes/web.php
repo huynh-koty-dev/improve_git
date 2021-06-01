@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SetLangController;
+use App\Http\Controllers\TodoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,17 +17,15 @@ use App\Http\Controllers\SetLangController;
 |
 */
 Route::middleware(['locale'])->group(function () {
+    Route::get('/login',[UserController::class,'getLoginView'])->name('loginpage');
+    Route::get('/register',[UserController::class,'getRegisterView'])->name('register_page');
     Route::middleware(['checklogin'])->group(function () {
-        //
-        Route::view('/home', 'home')->name('home');
-    });
-    Route::middleware(['checklogout'])->group(function () {  
-        //  
-        Route::view('/login', 'login')->name('loginpage');
+        Route::resource('todos', TodoController::class);
     });
     //====================get==========================
-    Route::get('change-language/{language}', [SetLangController::class,'setLang'])->name('user.change-language');
+    Route::get('change-language/{language}', [SetLangController::class,'setLang'])->name('user.change_language');
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
     //====================post=========================
     Route::post('login', [UserController::class, 'login'])->name('login');
+    Route::post('register', [UserController::class, 'register'])->name('register');
 });

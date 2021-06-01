@@ -1,7 +1,14 @@
 @extends('master')
 @section('content')
+    <div class="form-group">
+        <br><br>
+        <h1 style="text-align: center">{{ __('trans.Log in') }}</h1>
+    </div>
     <form action="{{ route('login') }}" class="custom-form" method="POST">
         @csrf
+        @if (Session::get('success'))
+            <div class="alert alert-danger" role="alert">{{ Session::get('success') }}</div>
+        @endif
         <div class="form-group">
             <label for="email">{{ __('trans.Email address') }}</label>
             <input type="email" class="form-control" name="email" value="{{ old('email') }}" id="email" aria-describedby="emailHelp"
