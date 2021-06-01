@@ -13,4 +13,6 @@ return [
     'name_max' => 'Tên người dùng không dài quá 30 ký tự',
     'repass_required' => 'Không được để trống!',
     'repass_same' => 'Mật khẩu không trùng khớp',
+    'title_required' => 'Tiêu đề không được để trống!',
+    'content_required' => 'Nội dung không được để trống!',
 ];

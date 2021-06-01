@@ -5,3 +5,10 @@
     left: 50%;
     transform: translate(-50%, -60%);
 }
+
+.custom-pagination {
+    position: relative;
+    top: 90%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+}

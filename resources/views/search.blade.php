@@ -2,8 +2,7 @@
 @section('content')
 <div class="container-fluid">
     <table class="table">
-        <a href="{{ route('todos.create') }}" class="btn btn-success"><i class="fas fa-edit"></i> {{ __('trans.add_new') }}</a>
-        <h3>Trang nay co: {!! $todos->count() !!} item</h3>
+        <h2>Có {{ $count }} kết quả tìm kiếm của: {{$text_search}}</h2>
         <thead style="text-align: center">
             <tr>
                 <th scope="col"></th>
@@ -15,7 +14,7 @@
         <tbody id="accordion" style="text-align: center">
             @foreach ($todos as $todo)
                 <tr>
-                    <th scope="row">{{ $loop->index + 1 }}</th>
+                    <th scope="row">+</th>
                     <td style="width: 700px">
                         <div class="card" >
                             <div class="card-header" id="headingOne{{$todo->id}}">
@@ -38,11 +37,7 @@
                     <td>
                         <div class="row">
                             <div class="col-sm-6">
-                                @if ($todo->status == 'status_done')
-                                    
-                                @else
-                                    <a href="{{ route('todos.edit', $todo->id) }}" title="edit" ><i class="fas fa-edit"></i></a> 
-                                @endif
+                                <a href="{{ route('todos.edit', $todo->id) }}" title="edit" ><i class="fas fa-edit"></i></a> 
                             </div>  
                             <div class="col-sm-6">
                                 <form action="{{ route('todos.destroy', $todo->id) }}" method="POST">
@@ -57,8 +52,8 @@
             @endforeach
         </tbody>
     </table>
-    <nav>
-        {{ $todos->links() }}
-    </nav>
+    <div class="custom-pagination">
+        {!! $todos->links() !!}
+    </div>
 </div>
 @endsection

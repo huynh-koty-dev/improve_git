@@ -13,4 +13,6 @@ return [
     'name_max' => 'UserName not too length 30 charactor',
     'repass_required' => 'Pass confirm field be not empty!',
     'repass_same' => 'Confirm password not matched!',
+    'title_required' => 'Title field be not empty!',
+    'content_required' => 'Content field be not empty!',
 ];
