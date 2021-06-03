@@ -22,6 +22,9 @@ Route::middleware(['locale'])->group(function () {
     Route::middleware(['checklogin'])->group(function () {
         Route::resource('todos', TodoController::class);
     });
+    Route::fallback(function() {
+        return 'Hm, why did you land here somehow?';
+    });
     //====================get==========================
     Route::get('change-language/{language}', [SetLangController::class,'setLang'])->name('user.change_language');
     Route::get('logout', [UserController::class, 'logout'])->name('logout');
